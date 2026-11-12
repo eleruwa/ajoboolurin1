@@ -23,7 +23,7 @@ export const palacePages: Record<string, PalacePage> = {
         paragraphs: [
           "His Royal Majesty, Oba Samuel Adebayo Adegbola Akanbi Agan, Ajobo Olurin I, was born on 15 January 1952 at Olurin Compound, Oke Oba Quarters, Eruwa, in present-day Ibarapa East Local Government Area of Oyo State.",
           "He was born to Pa Bello Ayinla Adegbola and Mama Olalonpe Abeni Adegbola. His paternal ancestry traces to Oba Olurin Iyanda Agan through Prince Kitoyi Ajobo Ajasa Agan and Prince Oyebade Alao Agan.",
-          "His maternal grandmother, Mama Olalonpe Abeni Adegbola, was a princess of the Ajao Royal Family within the Olaribikusi Ruling House."
+          "His mother, Mama Olalonpe Abeni Adegbola, was a princess of the Ajao Royal Family within the Olaribikusi Ruling House."
         ]
       },
       {
