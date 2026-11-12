@@ -1,0 +1,17 @@
+import Link from "next/link";
+import { navigation, site } from "@/lib/site";
+export default function HomePage() {
+  return <main id="main-content">
+    <section className="relative overflow-hidden bg-burgundy text-white">
+      <div className="absolute inset-0 opacity-10" aria-hidden="true"><div className="absolute -right-24 -top-32 size-[34rem] rounded-full border border-gold" /><div className="absolute -right-10 -top-16 size-[26rem] rounded-full border border-gold" /></div>
+      <div className="relative mx-auto grid max-w-7xl gap-12 px-5 py-24 sm:py-32 lg:grid-cols-[1.2fr_.8fr] lg:items-center lg:px-8">
+        <div><p className="text-xs font-semibold uppercase tracking-[.24em] text-gold">The Official Royal Portal</p><h1 className="mt-7 max-w-3xl font-serif text-4xl leading-tight sm:text-6xl">The Eleruwa of <span className="text-gold">Eruwaland</span></h1><p className="mt-6 max-w-2xl text-base leading-8 text-white/80 sm:text-lg">The digital home of the Royal Palace, its institution, the heritage of Eruwaland and official public communications.</p><div className="mt-9 flex flex-wrap gap-3"><Link href="/monarch" className="inline-flex min-h-12 items-center bg-gold px-6 text-sm font-semibold text-charcoal hover:bg-white">The Monarch</Link><Link href="/eruwaland" className="inline-flex min-h-12 items-center border border-white/50 px-6 text-sm font-semibold text-white hover:bg-white/10">Discover Eruwaland</Link></div></div>
+        <div className="flex min-h-72 items-center justify-center border border-gold/50 bg-black/10 p-8 text-center"><div><span className="font-serif text-6xl text-gold" aria-hidden="true">♛</span><p className="mt-5 font-serif text-xl">The Royal Palace</p><p className="mt-2 text-xs leading-6 text-white/65">Official royal portrait and Palace-approved imagery will be added after media verification.</p></div></div>
+      </div>
+    </section>
+    <section className="mx-auto max-w-7xl px-5 py-20 lg:px-8"><div className="max-w-2xl"><p className="text-xs font-semibold uppercase tracking-[.2em] text-burgundy">A Royal Institution</p><h2 className="mt-4 font-serif text-3xl leading-tight text-charcoal sm:text-4xl">Heritage, dignity and service</h2><p className="mt-5 text-base leading-8 text-charcoal/70">This portal will provide verified information about the Eleruwa institution, the Royal Palace and Eruwaland, alongside official news, perspectives and visitor information.</p></div>
+      <div className="mt-12 grid gap-px border border-black/10 bg-black/10 sm:grid-cols-2 lg:grid-cols-3">{navigation.filter((item) => item.href !== "/").map((item, index) => <Link key={item.href} href={item.href} className="group bg-white p-7 transition hover:bg-ivory"><span className="text-xs tracking-[.18em] text-gold">0{index + 1}</span><h3 className="mt-4 font-serif text-xl text-burgundy group-hover:text-forest">{item.label}</h3><span className="mt-5 inline-block text-xs font-semibold uppercase tracking-wider text-charcoal/60">Explore section →</span></Link>)}</div>
+    </section>
+    <section className="bg-forest px-5 py-16 text-center text-white"><p className="text-xs font-semibold uppercase tracking-[.2em] text-gold">The Eleruwa of Eruwaland</p><p className="mx-auto mt-4 max-w-2xl font-serif text-2xl leading-relaxed sm:text-3xl">An official platform for the Palace and the people of Eruwaland.</p><p className="mt-4 text-sm text-white/70">{site.location}</p></section>
+  </main>;
+}
